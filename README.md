@@ -23,10 +23,12 @@ DB$use.table('VERSION_CONTROL')
 c('c_3', '~date', 'prev') %>%
  DB$insert()
  
- DB$f('Persons') %>%                              # from 
-  DB$s('name, SUM(salary)') %>%                   # select 
-  DB$w('name IN ({1})', c('RU', 'UA', 'BY')) %>%  # where 
-  DB$g('name') %>%                                # group by   
+ countries <- c('RU', 'UA', 'BY')
+ 
+ DB$f('Persons') %>%                                             # from 
+  DB$s('name, SUM(salary) AS sm, AVG(age)') %>%                  # select 
+  DB$w('name IN ({1}) & 15 <= age <= 25', countries) %>%         # where 
+  DB$g('name') %>%                                               # group by   
   DB$o('salary') %>%                              # order by 
   DB$l(100) %>%                                   # limit   
   DB$h('[2] > 100') # means: SUM(salary) > 100    # having 
