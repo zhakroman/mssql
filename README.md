@@ -29,9 +29,9 @@ c('c_3', '~date', 'prev') %>%
   DB$s('name, SUM(salary) AS sm, AVG(age)') %>%                  # select 
   DB$w('name IN ({1}) & 15 <= age <= 25', countries) %>%         # where 
   DB$g('name') %>%                                               # group by   
-  DB$o('salary') %>%                              # order by 
-  DB$l(100) %>%                                   # limit   
-  DB$h('[2] > 100') # means: SUM(salary) > 100    # having 
-  DB$d('[1]') # means distinct name               # distinct                                    
+  DB$o('[1] A') %>%                                              # order by 
+  DB$l(100) %>%                                                  # limit   
+  DB$h('[2] > 100') # means: SUM(salary) > 100                   # having 
+  DB$d('[1]') # means distinct name                              # distinct                                    
  
 ```
