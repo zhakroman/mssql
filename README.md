@@ -1,2 +1,5 @@
-# mssql
-R library for MS SQL
+# R library for MS SQL
+
+DB <- MSSQL()
+DB$schema   <- 'dbo'
+DB$database <- 'datascience'
