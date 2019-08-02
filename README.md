@@ -20,7 +20,7 @@ if(!DB$use.in('VERSION_CONTROL')) {
 
 DB$use.table('VERSION_CONTROL')
 
-c('c_3', '~date', 'NULL') %>%
+c('c_3', '~date', 'prev') %>%
  DB$insert()
  
 ```
