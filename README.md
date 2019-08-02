@@ -1,6 +1,6 @@
 # R library for MS SQL
 
-```
+```R
 DB <- MSSQL()
 
 DB$schema   <- 'dbo'
