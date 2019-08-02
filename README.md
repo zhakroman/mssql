@@ -8,7 +8,7 @@ DB$database <- 'datascience'
 
 if(!DB$use.in('temptable')) {
   glue('
-         CREATE TABLE dbo.[WSPR_VERSION_CONTROL] (
+         CREATE TABLE [VERSION_CONTROL] (
           ID nvarchar(35) NOT NULL,
           DATET DATE NOT NULL,
           DEPS nvarchar(MAX) NULL,
