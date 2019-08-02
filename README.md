@@ -36,5 +36,7 @@ c('c_3', '~date', 'prev') %>%
   
  # Examples: 
  
- DB$f('items') %>% DB$s('*') # = 'USE datascience; SELECT * FROM dbo.items;'
+ DB$f('items') %>% 
+  DB$s('*') %>%
+  DB$l(1000) # = 'SELECT TOP(1000) * FROM [datascience].[dbo].[items];'
 ```
