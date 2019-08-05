@@ -37,7 +37,13 @@ c('c_3', '~date', 'prev') %>%
   
  # Examples: 
  
-  DB$s('*') %>%
+  DB$s() %>%
    DB$l(1000) %>%
   DB$f('items') # = 'SELECT TOP(1000) * FROM [datascience].[dbo].[items];'
+  
+  DB$s() %>%
+   DB$w('salary > 5000') %>%
+   DB$display() # shows sql-query: 'SELECT * FROM {table} WHERE salary > 5000
+   # Then you can run query 
+   DB$f('mytable')
 ```
