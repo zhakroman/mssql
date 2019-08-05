@@ -44,6 +44,6 @@ c('c_3', '~date', 'prev') %>%
   DB$s() %>%
    DB$w('salary > 5000') %>%
    DB$display() # shows sql-query: 'SELECT * FROM {table} WHERE salary > 5000
-   # Then you can run query 
-   DB$f('mytable')
+   # Then you can run query %>%
+  DB$f('mytable')
 ```
