@@ -33,7 +33,7 @@ c('c_3', '~date', 'prev') %>%
   DB$l(100) %>%                                                  # limit   
   DB$h('[2] > 100') %>% # means: SUM(salary) > 100               # having 
   DB$d('[1]')     # means distinct name                          # distinct 
- DB$f('Persons') %>%                                             # from !Always last command
+ DB$f('Persons')                                                 # from !Always last command
   
  # Examples: 
  
