@@ -48,7 +48,8 @@ c('c_3', '~date', 'prev') %>%
   DB$f('mytable')
   
   DB$s() %>%
-   DB$w('names IN ({1})', 
-     DB$s('tn') %>% DB$f('Cities')) %>%
+   DB$w('names IN ({1}) & country = {2}', 
+     DB$s('tn') %>% DB$f('Cities'),
+     'RU') %>%
    DB$f('employee')
 ```
