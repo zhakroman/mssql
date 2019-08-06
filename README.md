@@ -27,7 +27,7 @@ c('c_3', '~date', 'prev') %>%
  
 
  DB$s('name, SUM(salary) AS sm, AVG(age)') %>%                   # select !Always first command 
-  DB$w('name IN ({1}) & 15 <= age <= 25', countries) %>%         # where 
+  DB$w('name IN ({1}) & 15 <= age <  25', countries) %>%         # where 
   DB$g('name') %>%                                               # group by   
   DB$o('[1] A') %>%                                              # order by 
   DB$l(100) %>%                                                  # limit   
