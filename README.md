@@ -46,4 +46,9 @@ c('c_3', '~date', 'prev') %>%
    DB$display() # shows sql-query: 'SELECT * FROM {table} WHERE salary > 5000
    # Then you can run query %>%
   DB$f('mytable')
+  
+  DB$s() %>%
+   DB$w('names IN ({1})', 
+     DB$s('tn') %>% DB$f('Cities')) %>%
+   DB$f('employee')
 ```
